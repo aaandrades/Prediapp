@@ -1,38 +1,36 @@
 <ion-content [ngClass]="this.classloading">
-    <div id="home">
-        <h1 class="titulo">Prediapp</h1>
+    <div class="home">
+        <h1 class="home__titulo">Prediapp</h1>
     </div>
     <div>
-        <form id="register" novalidate [formGroup]="user">
-            <label class="labelinput">
-            <span>Usuario</span>
-            <input class="inputTypes" type="text" formControlName="name">
-          </label>
-            <label class="labelinput">
-            <span>Correo</span>
-            <input class="inputTypes" type="email" formControlName="correo">
-          </label>
-            <label class="labelinput">
-            <span>Código Empresa</span>
-            <input class="inputTypes" type="text" pattern="\d*" formControlName="codigo_empresa">
-          </label>
-            <label class="labelinput">
-            <span>Contraseña</span>
-            <input class="inputTypes" type="password" formControlName="password">
-          </label>
-            <label class="labelinput">
-            <span>Confirmar Contraseña</span>
-            <input class="inputTypes" type="password" formControlName="password_confirm">
-          </label>
-            <label class="checkboxAnswer">
-            <ion-checkbox *ngIf="!this.loading">
-            </ion-checkbox>
-            <p>
-              Acepto los términos y condiciones para el tratamiento de datos
-            </p>
-          </label>
-            <!-- [disabled]="user.invalid" -->
-            <button class="inicio" type="submit" (click)="onSubmit()">Registrar</button>
+        <form class="register" novalidate [formGroup]="user">
+            <label class="register__labelinput">
+        <span>Usuario</span>
+        <input class="register__labelinput__inputTypes" type="text" formControlName="name" />
+      </label>
+            <label class="register__labelinput">
+        <span>Correo</span>
+        <input class="register__labelinput__inputTypes" type="email" formControlName="correo" />
+      </label>
+            <label class="register__labelinput">
+        <span>Código Empresa</span>
+        <input class="register__labelinput__inputTypes" type="text" pattern="\d*" formControlName="codigo_empresa" />
+      </label>
+            <label class="register__labelinput">
+        <span>Contraseña</span>
+        <input class="register__labelinput__inputTypes" type="password" formControlName="password" />
+      </label>
+            <label class="register__labelinput">
+        <span>Confirmar Contraseña</span>
+        <input class="register__labelinput__inputTypes" type="password" formControlName="password_confirm" />
+      </label>
+            <div class="checkboxAnswer">
+                <ion-checkbox *ngIf="!this.loading"> </ion-checkbox>
+                <p>Acepto los términos y condiciones para el tratamiento de datos</p>
+            </div>
+            <button class="button" type="submit" (click)="onSubmit()">
+        Registrar
+      </button>
         </form>
     </div>
 </ion-content>

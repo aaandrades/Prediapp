@@ -1,24 +1,18 @@
 <ion-content [ngClass]="this.classloading">
-    <div id="home">
-        <h1 class="titulo">Prediapp</h1>
+    <div class="home">
+        <h1 class="home__titulo">Prediapp</h1>
     </div>
     <div>
-        <form id="login" novalidate [formGroup]="user">
-            <label class="labelinput">
-              <span>Usuario</span>
-              <input
-              class="inputTypes"
-                type="text"
-                formControlName="name">
+        <form class="login" novalidate [formGroup]="user">
+            <label class="login__labelinput">
+                <span>Usuario</span>
+                <input class="login__labelinput__inputTypes" type="text" formControlName="name">
             </label>
-            <label class="labelinput">
+            <label class="login__labelinput">
                 <span>Contraseña</span>
-                <input
-                class="inputTypes"
-                  type="password"
-                  formControlName="password">
-              </label>
-            <button class="inicio" type="submit" [disabled]="user.invalid" (click)="onSubmit()">Iniciar Sesión</button>
+                <input class="login__labelinput__inputTypes" type="password" formControlName="password">
+            </label>
+            <button class="button" type="submit" [disabled]="user.invalid" (click)="onSubmit()">Iniciar Sesión</button>
         </form>
     </div>
 </ion-content>
@@ -34,8 +28,3 @@
         <div></div>
     </div>
 </div>
-
-
-<!-- <input class="input"/>
-        <input class="input" text/>
-        <button class="inicio" [routerLink]="['/inicio']">Ingresar</button> -->

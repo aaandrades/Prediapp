@@ -55,9 +55,9 @@
                         </mat-panel-title>
                     </mat-expansion-panel-header>
                     <div class="accordion__panel__description">
-                        <p>Latitud: {{4.5}}</p>
-                        <p>Longitud: {{-74.2}}</p>
-                        <ion-button>Actualizar Coordenadas</ion-button>
+                        <p>Latitud: {{this.lat}}</p>
+                        <p>Longitud: {{this.long}}</p>
+                        <ion-button (click)="getCoordinates()">Actualizar Coordenadas</ion-button>
                     </div>
                 </mat-expansion-panel>
             </div>
@@ -129,7 +129,7 @@
 </ion-content>
 <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button color="light">
-        <img class="container__button" *ngIf="this.ubicacion_uso.invalid" src="../../../../assets/arrow-left-disabled.png" />
+        <img class="container__button" *ngIf="this.ubicacion_uso.invalid" src="../../../../assets/arrow-left-disabled.png" (click)=addTask()/>
         <img class="container__button" *ngIf="!this.ubicacion_uso.invalid" src="../../../../assets/arrow-left.png" (click)="onSubmit()" />
     </ion-fab-button>
 </ion-fab>

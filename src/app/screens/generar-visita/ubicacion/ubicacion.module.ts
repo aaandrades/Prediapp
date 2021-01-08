@@ -5,6 +5,7 @@ import { UbicacionPageRoutingModule } from './ubicacion-routing.module';
 import { MatExpansionModule } from "@angular/material/expansion";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UbicacionPage } from './ubicacion.page';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { UbicacionPage } from './ubicacion.page';
     ReactiveFormsModule,
     MatExpansionModule
   ],
-  declarations: [UbicacionPage]
+  declarations: [UbicacionPage],
+  providers: [Geolocation]
 })
 export class UbicacionPageModule {}

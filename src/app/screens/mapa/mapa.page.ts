@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import * as Leaflet from "leaflet";
-import { antPath } from "leaflet-ant-path";
 
 @Component({
   selector: "app-mapa",
@@ -35,20 +34,26 @@ export class MapaPage implements OnInit {
 
     Leaflet.marker([4.58602, -74.14197], this.icon)
       .addTo(this.map)
-      .bindPopup(`<div>ID: 126 <br>
+      .bindPopup(
+        `<div>ID: 126 <br>
       Fecha: 25/12/2020 <br>
       Visita Realizada: No</div>
-      <ion-button (click)="this.functions()")>Ver</ion-button>`)
+      <ion-button (click)="this.functions()")>Ver</ion-button>`
+      )
       .openPopup();
-    Leaflet.marker([4.590638, -74.136541], this.icon)
-      .addTo(this.map)
-      .bindPopup("529");
-    Leaflet.marker([4.581947, -74.135781], this.icon)
-      .addTo(this.map)
-      .bindPopup("1631");
+    Leaflet.marker([4.590638, -74.136541], this.icon).addTo(this.map)
+      .bindPopup(`<div>ID: 157 <br>
+      Fecha: 06/01/2021 <br>
+      Visita Realizada: Sí</div>
+      <ion-button (click)="this.functions()")>Ver</ion-button>`);
+    Leaflet.marker([4.581947, -74.135781], this.icon).addTo(this.map)
+      .bindPopup(`<div>ID: 094 <br>
+      Fecha: 15/12/2020 <br>
+      Visita Realizada: Sí</div>
+      <ion-button (click)="this.functions()")>Ver</ion-button>`);
   }
 
   functions() {
-    console.log("OPRIMO BOTON")
+    console.log("OPRIMO BOTON");
   }
 }

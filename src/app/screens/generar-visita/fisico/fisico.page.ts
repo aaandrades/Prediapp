@@ -29,15 +29,15 @@ export class FisicoPage implements OnInit {
     });
 
     this.fisico_construcciones = new FormGroup({
-      descripcion: new FormControl(""),
-      area: new FormControl(""),
-      unidad: new FormControl("")
+      descripcion_construccion: new FormControl(""),
+      area_construccion: new FormControl(""),
+      unidad_construccion: new FormControl("")
     });
 
     this.fisico_cultivos = new FormGroup({
-      descripcion: new FormControl(""),
-      area: new FormControl(""),
-      unidad: new FormControl("")
+      descripcion_cultivos: new FormControl(""),
+      area_cultivos: new FormControl(""),
+      unidad_cultivos: new FormControl("")
     });
   }
 
