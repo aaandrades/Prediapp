@@ -1,0 +1,129 @@
+<ion-content>
+    <div class="body">
+        <mat-accordion class="accordion">
+            <div>
+                <mat-expansion-panel class="accordion__panel" hideToggle>
+                    <mat-expansion-panel-header class="accordion__panel__title">
+                        <mat-panel-title>
+                            Información General
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="accordion__panel__description">
+                        <p>Fecha: 12/12/2020
+                            <br>Predio: B45
+                        </p>
+                    </div>
+                </mat-expansion-panel>
+            </div>
+            <div>
+                <mat-expansion-panel hideToggle class="accordion__panel">
+                    <mat-expansion-panel-header class="accordion__panel__title">
+                        <mat-panel-title>
+                            Propietario o Representante
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <form id="propietario" class="accordion__panel__description" novalidate [formGroup]="general_propietario">
+                        <label class="labelinput">
+                            <span>Nombre</span>
+                            <input class="inputTypes" type="text" formControlName="nombre">
+                        </label>
+                        <label class="labelinput">
+                            <span>No Identificación</span>
+                            <input class="inputTypes" type="text" formControlName="cedula">
+                        </label>
+                        <label class="labelinput">
+                            <span>Dirección</span>
+                            <input class="inputTypes" type="text" formControlName="direccion">
+                        </label>
+                        <label class="labelinput">
+                            <span>Celular</span>
+                            <input class="inputTypes" type="text" formControlName="celular">
+                        </label>
+                        <label class="labelinput">
+                            <span>Email</span>
+                            <input class="inputTypes" type="email" formControlName="email">
+                        </label>
+                    </form>
+                </mat-expansion-panel>
+            </div>
+            <div>
+                <mat-expansion-panel hideToggle class="accordion__panel">
+                    <mat-expansion-panel-header class="accordion__panel__title">
+                        <mat-panel-title>
+                            Predio
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <form id="predio" class="accordion__panel__description" novalidate [formGroup]="general_predio">
+                        <label class="labelinput">
+                            <span>Cédula Catastral</span>
+                            <input class="inputTypes" type="text" formControlName="cedula_catastral">
+                        </label>
+                        <label class="labelinput">
+                            <span>Matrícula Inmobiliaria</span>
+                            <input class="inputTypes" type="text" formControlName="matricula_inmobiliaria">
+                        </label>
+                    </form>
+                </mat-expansion-panel>
+            </div>
+            <div>
+                <mat-expansion-panel hideToggle class="accordion__panel">
+                    <mat-expansion-panel-header class="accordion__panel__title">
+                        <mat-panel-title>
+                            Descripción
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <form id="descripcion" class="accordion__panel__description" novalidate [formGroup]="general_descripcion">
+                        <label class="labelinput">
+                            <span>Descripción general del Predio</span>
+                            <input class="inputTypes" type="text" formControlName="descripcion">
+                        </label>
+                    </form>
+                </mat-expansion-panel>
+            </div>
+            <div>
+                <mat-expansion-panel hideToggle class="accordion__panel">
+                    <mat-expansion-panel-header class="accordion__panel__title">
+                        <mat-panel-title>
+                            Objeto
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <form id="objeto" class="accordion__panel__description" novalidate [formGroup]="general_objeto">
+                        <label class="labelinput">
+                            <span>Predio requerido para: </span>
+                            <input class="inputTypes" type="text" formControlName="objeto">
+                        </label>
+                        <label class="labelinput">
+                            <span>Escritura Disponible</span>
+                            <input class="inputTypes" type="text" formControlName="escritura">
+                        </label>
+                    </form>
+                </mat-expansion-panel>
+            </div>
+            <div>
+                <mat-expansion-panel hideToggle class="accordion__panel">
+                    <mat-expansion-panel-header class="accordion__panel__title">
+                        <mat-panel-title>
+                            Registro Fotográfico
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="registro">
+                        <div class="registro__option">
+                            <span>Vista Panorámica Predio</span>
+                            <ion-icon name="camera" class="registro__option__icon"></ion-icon>
+                        </div>
+                        <div class="registro__option">
+                            <span>Vista Panorámica Afectación</span>
+                            <ion-icon name="camera" class="registro__option__icon"></ion-icon>
+                        </div>
+                    </div>
+                </mat-expansion-panel>
+            </div>
+        </mat-accordion>
+    </div>
+</ion-content>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="light">
+        <img class="container__button" *ngIf="this.general_predio.invalid" src="../../../../assets/arrow-left-disabled.png" />
+        <img class="container__button" *ngIf="!this.general_predio.invalid" src="../../../../assets/arrow-left.png" (click)="onSubmit()" />
+    </ion-fab-button>
+</ion-fab>

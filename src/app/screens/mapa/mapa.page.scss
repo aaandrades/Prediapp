@@ -1,0 +1,20 @@
+// @import "../../../../node_modules/snazzy-info-window/dist/snazzy-info-window.css";
+ion-content {
+    pointer-events: all;
+}
+
+agm-map {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    &__button {
+        background: #061a40;
+    }
+}
+
+#info {
+    width: 200px;
+    height: 160px;
+}

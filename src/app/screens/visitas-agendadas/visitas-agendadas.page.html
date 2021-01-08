@@ -1,0 +1,53 @@
+<app-toolbar titulo="Visitas Asignadas"></app-toolbar>
+
+<ion-content>
+    <div class="body">
+        <div class="card">
+            <p class="title">
+                Visitas por realizar
+            </p>
+            <div *ngIf="!data">
+                <ion-list>
+                    <ion-item *ngFor="let item of [1,1,1]">
+                        <ion-skeleton-text animated style="width: 27px; height: 27px" slot="start"></ion-skeleton-text>
+                        <ion-label>
+                            <h3>
+                                <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                            </h3>
+                            <p>
+                                <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+                            </p>
+                            <p>
+                                <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                            </p>
+                        </ion-label>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>
+        <div class="card">
+            <p class="title">
+                Visitas realizadas
+            </p>
+            <div *ngIf="!data">
+                <ion-list>
+                    <ion-item>
+                        <ion-skeleton-text animated style="width: 27px; height: 27px" slot="start"></ion-skeleton-text>
+                        <ion-label>
+                            <h3>
+                                <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                            </h3>
+                            <p>
+                                <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+                            </p>
+                            <p>
+                                <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                            </p>
+                        </ion-label>
+                    </ion-item>
+                </ion-list>
+            </div>
+
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,124 @@
+<div class="body">
+    <mat-accordion class="accordion">
+        <div>
+            <mat-expansion-panel class="accordion__panel" hideToggle>
+                <mat-expansion-panel-header class="accordion__panel__title">
+                    <mat-panel-title>
+                        Descripción
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <form class="accordion__panel__description" [formGroup]="predio_descripcion" id="linderos">
+                    <label class="labelRadio">
+                        <p>¿Posee licencia de Construcción?</p>
+                        <div class="accordion__panel__description__buttonRadio">
+                            <p>SÍ </p><input type="radio" formControlName="licencia" value="true">
+                            <p>NO </p><input type="radio" formControlName="licencia" value="false">
+                        </div>
+                        <label class="labelinput" *ngIf="predio_descripcion.value.licencia === 'true'">
+                            <span>Indique el número de Licencia</span>
+                            <input class="inputTypes" type="text" formControlName="no_licencia">
+                        </label>
+                    </label>
+                    <label class="labelRadio">
+                        <p>Propiedad Horizontal</p>
+                        <div class="accordion__panel__description__buttonRadio">
+                            <p>SÍ </p><input type="radio" formControlName="ph" value="true">
+                            <p>NO </p><input type="radio" formControlName="ph" value="false">
+                        </div>
+                        <label class="labelinput" *ngIf="predio_descripcion.value.ph === 'true'">
+                            <span>Número de Torres</span>
+                            <input class="inputTypes" type="text" formControlName="ph_torres">
+                        </label>
+                    <label class="labelinput" *ngIf="predio_descripcion.value.ph === 'true'">
+                            <span>Número de Pisos</span>
+                            <input class="inputTypes" type="text" formControlName="ph_pisos">
+                        </label>
+                    <label class="labelinput" *ngIf="predio_descripcion.value.ph === 'true'">
+                            <span>No. de unidades por Piso</span>
+                            <input class="inputTypes" type="text" formControlName="ph_unidades">
+                        </label>
+                    </label>
+                </form>
+            </mat-expansion-panel>
+        </div>
+        <div>
+            <mat-expansion-panel hideToggle class="accordion__panel">
+                <mat-expansion-panel-header class="accordion__panel__title">
+                    <mat-panel-title>
+                        Servicios Públicos
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <form class="accordion__panel__description" [formGroup]="predio_servicios" id="linderos">
+                    <label class="labelRadio">
+                        <div class="accordion__panel__description__button">
+                            <p>Electricidad</p>
+                            <p>SÍ </p><input type="radio" formControlName="electricidad" value="true">
+                            <p>NO </p><input type="radio" formControlName="electricidad" value="false">
+                        </div>
+                    </label>
+                    <label class="labelRadio">
+                        <div class="accordion__panel__description__button">
+                            <p>Agua</p>
+                            <p>SÍ </p><input type="radio" formControlName="agua" value="true">
+                            <p>NO </p><input type="radio" formControlName="agua" value="false">
+                        </div>
+                    </label>
+                    <label class="labelRadio">
+                        <div class="accordion__panel__description__button">
+                            <p>Gas Natural</p>
+                            <p>SÍ </p><input type="radio" formControlName="gas_natural" value="true">
+                            <p>NO </p><input type="radio" formControlName="gas_natural" value="false">
+                        </div>
+                    </label>
+                    <label class="labelRadio">
+                        <div class="accordion__panel__description__button">
+                            <p>Alcantarillado</p>
+                            <p>SÍ </p><input type="radio" formControlName="alcantarillado" value="true">
+                            <p>NO </p><input type="radio" formControlName="alcantarillado" value="false">
+                        </div>
+                    </label>
+                    <label class="labelRadio">
+                        <div class="accordion__panel__description__button">
+                            <p>Teléfono</p>
+                            <p>SÍ </p><input type="radio" formControlName="telefono" value="true">
+                            <p>NO </p><input type="radio" formControlName="telefono" value="false">
+                        </div>
+                    </label>
+                    <label class="labelRadio">
+                        <div class="accordion__panel__description__button">
+                            <p>Internet</p>
+                            <p>SÍ </p><input type="radio" formControlName="internet" value="true">
+                            <p>NO </p><input type="radio" formControlName="internet" value="false">
+                        </div>
+                    </label>
+                </form>
+            </mat-expansion-panel>
+        </div>
+        <div>
+            <mat-expansion-panel hideToggle class="accordion__panel">
+                <mat-expansion-panel-header class="accordion__panel__title">
+                    <mat-panel-title>
+                        Riesgo
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <form class="accordion__panel__description" [formGroup]="predio_riesgo" id="linderos">
+                    <label class="labelRadio">
+                        <p>¿Cercanía a cuerpos de Agua o Taludes?</p>
+                        <div class="accordion__panel__description__buttonRadio">
+                            <p>SÍ </p><input type="radio" formControlName="riesgo" value="true">
+                            <p>NO </p><input type="radio" formControlName="riesgo" value="false">
+                        </div>
+                        <label class="labelinput" *ngIf="predio_riesgo.value.riesgo === 'true'">
+                            <span>Indique el evento de riesgo</span>
+                            <input class="inputTypes" type="text" formControlName="riesgo_descripcion">
+                        </label>
+                    </label>
+                </form>
+            </mat-expansion-panel>
+        </div>
+        <div class="container">
+            <button class="button__disabled" *ngIf="this.predio_descripcion.invalid">Enviar</button>
+            <button class="button" *ngIf="!this.predio_descripcion.invalid" (click)="onSubmit()">Enviar</button>
+        </div>
+    </mat-accordion>
+</div>

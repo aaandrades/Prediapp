@@ -1,0 +1,105 @@
+<ion-content no-scroll padding>
+    <div class="body">
+        <mat-accordion class="accordion">
+            <div>
+                <mat-expansion-panel class="accordion__panelMain" hideToggle>
+                    <mat-expansion-panel-header class="accordion__panel__title">
+                        <mat-panel-title>
+                            Linderos
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <form id="linderos" class="accordion__panel__description" novalidate [formGroup]="fisico_linderos">
+                        <label class="labelinput">
+                        <span>Norte</span>
+                        <input class="inputTypes" type="text" formControlName="norte">
+                    </label>
+                        <label class="labelinput">
+                        <span>Sur</span>
+                        <input class="inputTypes" type="text" formControlName="sur">
+                    </label>
+                        <label class="labelinput">
+                        <span>Oriente</span>
+                        <input class="inputTypes" type="text" formControlName="oriente">
+                    </label>
+                        <label class="labelinput">
+                        <span>Occidente</span>
+                        <input class="inputTypes" type="text" formControlName="occidente">
+                    </label>
+                    </form>
+                </mat-expansion-panel>
+            </div>
+            <div>
+                <mat-expansion-panel hideToggle class="accordion__panel" *ngFor="let item of construcciones">
+                    <mat-expansion-panel-header class="accordion__panel__title">
+                        <mat-panel-title>
+                            {{item}}
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <form id="construccion" class="accordion__panel__description" novalidate [formGroup]="fisico_construcciones">
+                        <label class="labelinput">
+                        <span>Descripción</span>
+                        <input class="inputTypes" type="text" formControlName="descripcion">
+                    </label>
+                        <label class="labelinput__min">
+                        <div>
+                            <p class="labelinput__min__text">Área</p>
+                            <input class="inputTypes__min" type="text" formControlName="area">
+                        </div>
+                        <div>
+                            <p class="labelinput__min__text">Unidad</p>
+                            <input class="inputTypes__min" type="text" formControlName="unidad">
+                        </div>
+                    </label>
+                    </form>
+                    <div class="registro">
+                        <p class="registro__option__text">Fotografía Panorámica</p>
+                        <ion-icon name="camera" class="registro__option__icon"></ion-icon>
+                    </div>
+                </mat-expansion-panel>
+            </div>
+            <div class="addingOption" (click)="addConstruccion()">
+                <ion-icon name="add-circle" class="addingOption__icon"></ion-icon>
+                <p>Agrear Construcción</p>
+            </div>
+            <div>
+                <mat-expansion-panel hideToggle class="accordion__panel" *ngFor="let item of cultivos">
+                    <mat-expansion-panel-header class="accordion__panel__title">
+                        <mat-panel-title>
+                            {{item}}
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <form id="cultivos" class="accordion__panel__description" novalidate [formGroup]="fisico_cultivos">
+                        <label class="labelinput">
+                        <span>Descripción</span>
+                        <input class="inputTypes" type="text" formControlName="descripcion">
+                    </label>
+                        <label class="labelinput__min">
+                        <div>
+                            <p class="labelinput__min__text">Área</p>
+                            <input class="inputTypes__min" type="text" formControlName="area">
+                        </div>
+                        <div>
+                            <p class="labelinput__min__text">Unidad</p>
+                            <input class="inputTypes__min" type="text" formControlName="unidad">
+                        </div>
+                    </label>
+                    </form>
+                    <div class="registro">
+                        <p class="registro__option__text">Fotografía Panorámica</p>
+                        <ion-icon name="camera" class="registro__option__icon"></ion-icon>
+                    </div>
+                </mat-expansion-panel>
+            </div>
+            <div class="addingOption" (click)="addCultivo()">
+                <ion-icon name="add-circle" class="addingOption__icon"></ion-icon>
+                <p>Agrear Especie o Cultivo</p>
+            </div>
+        </mat-accordion>
+    </div>
+</ion-content>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="light">
+        <img class="container__button" *ngIf="this.fisico_linderos.invalid" src="../../../../assets/arrow-left-disabled.png" />
+        <img class="container__button" *ngIf="!this.fisico_linderos.invalid" src="../../../../assets/arrow-left.png" (click)="onSubmit()" />
+    </ion-fab-button>
+</ion-fab>

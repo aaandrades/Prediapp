@@ -1,0 +1,126 @@
+.body {
+    background-color: #3c91e6 !important;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.accordion {
+    pointer-events: all;
+    padding: 17px;
+    width: 100%;
+    &__panel {
+        background-color: white;
+        border-radius: 20px;
+        margin-bottom: 5px;
+        -webkit-box-shadow: 10px 11px 36px -13px rgba(0, 0, 0, 0.48);
+        -moz-box-shadow: 10px 11px 36px -13px rgba(0, 0, 0, 0.48);
+        box-shadow: 10px 11px 36px -13px rgba(0, 0, 0, 0.48);
+        &__title {
+            padding: 20px;
+            font-weight: bold;
+        }
+        &__description {
+            font-size: 14px;
+        }
+    }
+    &__panelMain {
+        background-color: white;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        -webkit-box-shadow: 10px 11px 36px -13px rgba(0, 0, 0, 0.48);
+        -moz-box-shadow: 10px 11px 36px -13px rgba(0, 0, 0, 0.48);
+        box-shadow: 10px 11px 36px -13px rgba(0, 0, 0, 0.48);
+        &__title {
+            padding: 20px;
+            font-weight: bold;
+        }
+        &__description {
+            font-size: 14px;
+        }
+    }
+}
+
+.addingOption {
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 40px;
+    margin-bottom: 20px;
+    &__icon {
+        padding-right: 10px;
+        font-size: 1.6em;
+    }
+}
+
+.registro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    &__option {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+        &__icon {
+            padding-left: 20px;
+            font-size: 1.3em;
+        }
+        &__text {
+            font-size: 14px;
+            color: #061a40;
+        }
+    }
+}
+
+.labelinput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    font-size: 14px;
+    color: #061a40;
+}
+
+.labelinput__min {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    font-size: 14px;
+    color: #061a40;
+    &__text {
+        padding: 0px;
+    }
+}
+
+.inputTypes {
+    padding: 13px 151px 11px 18px;
+    height: 30px;
+    border-color: #cccccc;
+    border-width: 1px;
+    border-radius: 7px;
+    border-style: solid;
+}
+
+.inputTypes__min {
+    height: 30px;
+    width: 55%;
+    border-color: #cccccc;
+    border-width: 1px;
+    border-radius: 7px;
+    border-style: solid;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    &__button {
+        border-radius: 50%;
+        width: 40px;
+        box-shadow: 4px 2px 2px 0px rgba(42, 42, 42, .3);
+    }
+}

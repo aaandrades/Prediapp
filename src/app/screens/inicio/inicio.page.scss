@@ -1,0 +1,74 @@
+.SplashScreen {
+    background-color: #3c91e6;
+    width: 100%;
+    height: 100%;
+}
+
+ion-header button,
+.back-button {
+    position: absolute !important;
+    z-index: 5;
+}
+
+.button {
+    pointer-events: all;
+}
+
+ion-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 90px 1px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.drawer {
+    pointer-events: all;
+}
+
+.toolbar-container {
+    justify-items: self-end;
+    color: white;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 236px;
+    background-image: linear-gradient(127deg, #3d85df 10%, #040a10 84%);
+}
+
+.bottomText {
+    display: flex;
+    justify-content: center;
+    font-size: 9px;
+    color: #4a4343;
+}
+
+.ionIcon {
+    color: black
+}
+
+.dot {
+    height: 108px;
+    width: 108px;
+    background-image: src;
+    border-radius: 50%;
+    border: solid 3px black;
+    display: inline-block;
+}
+
+.line {
+    border: solid 1px #707070;
+    height: 0;
+    width: 80%;
+    margin-top: 0;
+}
+
+.ionItem {
+    margin-left: 25px;
+}
+
+.ionLabel {
+    color: #4a4343;
+    margin-left: 10px;
+}

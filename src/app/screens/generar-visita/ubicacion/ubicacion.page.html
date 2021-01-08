@@ -1,0 +1,135 @@
+<ion-content>
+    <div class="body">
+        <mat-accordion class="accordion">
+            <div>
+                <mat-expansion-panel class="accordion__panel" hideToggle>
+                    <mat-expansion-panel-header class="accordion__panel__title">
+                        <mat-panel-title>
+                            Información de Ubicación
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <form id="informacion" class="accordion__panel__description" novalidate [formGroup]="ubicacion_informacion">
+                        <label class="labelinput">
+                            <span>Barrio/Vereda</span>
+                            <input class="inputTypes" type="text" formControlName="barrio">
+                        </label>
+                        <label class="labelinput">
+                            <span>Municipio</span>
+                            <input class="inputTypes" type="text" formControlName="municipio">
+                        </label>
+                        <label class="labelinput">
+                            <span>Departamento</span>
+                            <input class="inputTypes" type="text" formControlName="departamento">
+                        </label>
+                    </form>
+                </mat-expansion-panel>
+            </div>
+            <div>
+                <mat-expansion-panel hideToggle class="accordion__panel">
+                    <mat-expansion-panel-header class="accordion__panel__title">
+                        <mat-panel-title>
+                            Actividad y Contexto
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <form id="uso" class="accordion__panel__description" novalidate [formGroup]="ubicacion_uso">
+                        <label class="labelinput">
+                            <span>Clasificación de Uso del Suelo</span>
+                            <input class="inputTypes" type="text" formControlName="clasificacion_suelo">
+                        </label>
+                        <label class="labelinput">
+                            <span>Actividad Económica del Predio</span>
+                            <input class="inputTypes" type="text" formControlName="actividad">
+                        </label>
+                        <label class="labelinput">
+                            <span>Topografía</span>
+                            <input class="inputTypes" type="text" formControlName="topografia">
+                        </label>
+                    </form>
+                </mat-expansion-panel>
+            </div>
+            <div>
+                <mat-expansion-panel hideToggle class="accordion__panel">
+                    <mat-expansion-panel-header class="accordion__panel__title">
+                        <mat-panel-title>
+                            Ubicación
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="accordion__panel__description">
+                        <p>Latitud: {{4.5}}</p>
+                        <p>Longitud: {{-74.2}}</p>
+                        <ion-button>Actualizar Coordenadas</ion-button>
+                    </div>
+                </mat-expansion-panel>
+            </div>
+            <div>
+                <mat-expansion-panel hideToggle class="accordion__panel">
+                    <mat-expansion-panel-header class="accordion__panel__title">
+                        <mat-panel-title>
+                            Descripción del Sector
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <form id="descripcion" class="accordion__panel__description" novalidate [formGroup]="ubicacion_sector">
+                        <label class="labelinput">
+                            <span>Estado Vías</span>
+                            <ion-item>
+                                <ion-select>
+                                    <ion-select-option value="Excelente">Excelente</ion-select-option>
+                                    <ion-select-option value="Bueno">Bueno</ion-select-option>
+                                    <ion-select-option value="Regular">Regular</ion-select-option>
+                                    <ion-select-option value="Malo">Malo</ion-select-option>
+                                    <ion-select-option value="No Transitable">No transitable</ion-select-option>
+                                </ion-select>
+                            </ion-item>
+                        </label>
+                        <label class="labelRadio">
+                            <div class="accordion__panel__description__button">
+                                <p>Alumbrado Público</p>
+                                <p>SÍ </p><input type="radio" formControlName="alumbrado" value="true">
+                                <p>NO </p><input type="radio" formControlName="alumbrado" value="false">
+                            </div>
+                        </label>
+                        <label class="labelRadio">
+                            <div class="accordion__panel__description__button">
+                                <p>Transporte Público</p>
+                                <p>SÍ </p><input type="radio" formControlName="transporte" value="true">
+                                <p>NO </p><input type="radio" formControlName="transporte" value="false">
+                            </div>
+                        </label>
+                        <label class="labelRadio">
+                            <div class="accordion__panel__description__button">
+                                <p>Equipamientos Públicos</p>
+                                <p>SÍ </p><input type="radio" formControlName="equipamientos" value="true">
+                                <p>NO </p><input type="radio" formControlName="equipamientos" value="false">
+                            </div>
+                        </label>
+                    </form>
+                </mat-expansion-panel>
+            </div>
+            <div>
+                <mat-expansion-panel hideToggle class="accordion__panel">
+                    <mat-expansion-panel-header class="accordion__panel__title">
+                        <mat-panel-title>
+                            Registro Fotográfico
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div class="registro">
+                        <div class="registro__option">
+                            <span>Vías</span>
+                            <ion-icon name="camera" class="registro__option__icon"></ion-icon>
+                        </div>
+                        <div class="registro__option">
+                            <span>Contadores Públicos</span>
+                            <ion-icon name="camera" class="registro__option__icon"></ion-icon>
+                        </div>
+                    </div>
+                </mat-expansion-panel>
+            </div>
+        </mat-accordion>
+    </div>
+</ion-content>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="light">
+        <img class="container__button" *ngIf="this.ubicacion_uso.invalid" src="../../../../assets/arrow-left-disabled.png" />
+        <img class="container__button" *ngIf="!this.ubicacion_uso.invalid" src="../../../../assets/arrow-left.png" (click)="onSubmit()" />
+    </ion-fab-button>
+</ion-fab>

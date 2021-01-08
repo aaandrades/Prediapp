@@ -1,0 +1,29 @@
+<app-toolbar titulo="Perfil"></app-toolbar>
+
+<ion-content>
+    <div class="header">
+        <img src="../assets/rick.png" class="dot" alt="Avatar">
+        <p>Codigo Empresa: 5623</p>
+    </div>
+    <div class="content">
+        <form class="content__form">
+            <p class="text">Usuario</p>
+            <input class="content__form__inputTypes disabled" disabled type="text" value="aaandrades">
+            <p class="text">Nombres</p>
+            <input class="content__form__inputTypes" type="text" value="Andrés Alexander">
+            <p class="text">Apellidos</p>
+            <input class="content__form__inputTypes" type="text" value="Andrés Alexander">
+            <p class="text">Fecha de Nacimiento</p>
+            <input class="content__form__inputTypes" type="datetime" value="29/05/1996">
+            <div *ngIf="this.password">
+                <p class="text">Contraseña Actual</p>
+                <input class="content__form__inputTypes" type="password">
+                <p class="text">Nueva Contraseña</p>
+                <input class="content__form__inputTypes" type="password">
+            </div>
+        </form>
+        <button class="content__password" *ngIf="!this.password" (click)="activateForm()">Cambiar Contraseña</button>
+        <button class="content__password" *ngIf="this.password" (click)="presentLoading()">Guardar</button>
+
+    </div>
+</ion-content>

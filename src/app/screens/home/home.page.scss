@@ -1,0 +1,53 @@
+#home {
+    display: flex;
+    background-image: url('../../../assets/background.PNG');
+    flex-direction: column-reverse;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 90px;
+    padding-left: 43px;
+    padding-right: 43px;
+    align-items: center;
+}
+
+.login {
+    background-color: #ffffff;
+    border-radius: 40px;
+    color: #061a40;
+    height: 54px;
+    width: 289px;
+    font-size: 15px;
+    line-height: 1.33;
+    font-weight: 600;
+    letter-spacing: 0.5ch;
+    -webkit-box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.75);
+}
+
+.registro {
+    background-color: #061a40;
+    border-radius: 40px;
+    color: white;
+    margin-top: 20px;
+    height: 54px;
+    width: 289px;
+    font-size: 15px;
+    line-height: 1.33;
+    font-weight: 600;
+    letter-spacing: 0.5ch;
+    -webkit-box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.75);
+}
+
+.titulo {
+    width: 174px;
+    height: 55px;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 380px;
+    line-height: 1.38;
+    text-align: center;
+    color: #ffffff;
+}

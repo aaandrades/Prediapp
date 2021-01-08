@@ -1,0 +1,19 @@
+<ion-content [ngClass]="classbg">
+    <div class="logout" (click)="logout()">
+        <img class="logout__image" src="../../../assets/icon.png" />
+        <p class="logout__text">Sesión Finalizada</p>
+    </div>
+</ion-content>
+
+<div class="loading" *ngIf="this.loader">
+    <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>

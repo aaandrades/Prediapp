@@ -1,0 +1,121 @@
+.body {
+    background-color: #3c91e6;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.accordion {
+    pointer-events: all;
+    padding: 17px;
+    width: 100%;
+    &__panel {
+        background-color: white;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        -webkit-box-shadow: 10px 11px 36px -13px rgba(0, 0, 0, 0.48);
+        -moz-box-shadow: 10px 11px 36px -13px rgba(0, 0, 0, 0.48);
+        box-shadow: 10px 11px 36px -13px rgba(0, 0, 0, 0.48);
+        &__title {
+            padding: 20px;
+            font-weight: bold;
+        }
+        &__description {
+            font-size: 14px;
+            &__button {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                border: 1px;
+                border-radius: 20px;
+                border-color: black;
+                p {
+                    margin: 7px 20px;
+                }
+            }
+            &__buttonRadio {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                border: 1px;
+                border-radius: 20px;
+                border-color: black;
+                p {
+                    margin: 0px 20px;
+                }
+            }
+        }
+    }
+}
+
+.labelinput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    font-size: 14px;
+    color: #061a40;
+}
+
+.labelRadio {
+    margin-top: 10px;
+    margin-bottom: 3px;
+    font-size: 15px;
+    color: #061a40;
+    &__container {
+        border: 1px;
+        border-radius: 50%;
+        box-shadow: 4px 2px 2px 0px rgba(42, 42, 42, .3);
+    }
+}
+
+.inputTypes {
+    padding: 13px 151px 11px 18px;
+    height: 30px;
+    border-color: #cccccc;
+    border-width: 1px;
+    border-radius: 7px;
+    border-style: solid;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    &__button {
+        border-radius: 50%;
+        width: 40px;
+        box-shadow: 4px 2px 2px 0px rgba(42, 42, 42, .3);
+    }
+}
+
+.button {
+    background-color: #061a40;
+    border-radius: 40px;
+    color: white;
+    margin-top: 20px;
+    height: 44px;
+    width: 209px;
+    font-size: 19px;
+    line-height: 1.33;
+    font-weight: 600;
+    -webkit-box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.75);
+}
+
+.button__disabled {
+    background-color: lightgray;
+    border-radius: 40px;
+    color: white;
+    margin-top: 20px;
+    height: 44px;
+    width: 209px;
+    font-size: 19px;
+    line-height: 1.33;
+    font-weight: 600;
+    -webkit-box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 4px 12px 1px rgba(0, 0, 0, 0.75);
+}

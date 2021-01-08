@@ -1,0 +1,50 @@
+<ion-content [ngClass]="this.classloading">
+    <div id="home">
+        <h1 class="titulo">Prediapp</h1>
+    </div>
+    <div>
+        <form id="register" novalidate [formGroup]="user">
+            <label class="labelinput">
+            <span>Usuario</span>
+            <input class="inputTypes" type="text" formControlName="name">
+          </label>
+            <label class="labelinput">
+            <span>Correo</span>
+            <input class="inputTypes" type="email" formControlName="correo">
+          </label>
+            <label class="labelinput">
+            <span>Código Empresa</span>
+            <input class="inputTypes" type="text" pattern="\d*" formControlName="codigo_empresa">
+          </label>
+            <label class="labelinput">
+            <span>Contraseña</span>
+            <input class="inputTypes" type="password" formControlName="password">
+          </label>
+            <label class="labelinput">
+            <span>Confirmar Contraseña</span>
+            <input class="inputTypes" type="password" formControlName="password_confirm">
+          </label>
+            <label class="checkboxAnswer">
+            <ion-checkbox *ngIf="!this.loading">
+            </ion-checkbox>
+            <p>
+              Acepto los términos y condiciones para el tratamiento de datos
+            </p>
+          </label>
+            <!-- [disabled]="user.invalid" -->
+            <button class="inicio" type="submit" (click)="onSubmit()">Registrar</button>
+        </form>
+    </div>
+</ion-content>
+<div class="loading" *ngIf="this.loading">
+    <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>

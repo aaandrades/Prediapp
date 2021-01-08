@@ -1,0 +1,41 @@
+<ion-content [ngClass]="this.classloading">
+    <div id="home">
+        <h1 class="titulo">Prediapp</h1>
+    </div>
+    <div>
+        <form id="login" novalidate [formGroup]="user">
+            <label class="labelinput">
+              <span>Usuario</span>
+              <input
+              class="inputTypes"
+                type="text"
+                formControlName="name">
+            </label>
+            <label class="labelinput">
+                <span>Contraseña</span>
+                <input
+                class="inputTypes"
+                  type="password"
+                  formControlName="password">
+              </label>
+            <button class="inicio" type="submit" [disabled]="user.invalid" (click)="onSubmit()">Iniciar Sesión</button>
+        </form>
+    </div>
+</ion-content>
+<div class="loading" *ngIf="this.loading">
+    <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+
+<!-- <input class="input"/>
+        <input class="input" text/>
+        <button class="inicio" [routerLink]="['/inicio']">Ingresar</button> -->
