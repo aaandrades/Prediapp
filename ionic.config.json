@@ -1,0 +1,7 @@
+{
+  "name": "prediapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
