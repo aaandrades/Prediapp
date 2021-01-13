@@ -1,10 +1,11 @@
+import { visitAll } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from "@angular/router";
 import { Geolocation } from '@ionic-native/geolocation/ngx';
-import { AppState } from "../../../store/app.state";
-import * as VisitaActions from "../../../store/visita.actions";
 import { Store } from "@ngrx/store";
+import * as Visit from 'src/app/store/actions';
+
 
 @Component({
   selector: 'app-ubicacion',
@@ -60,7 +61,7 @@ export class UbicacionPage implements OnInit {
 
   addTask() {
     this.store.dispatch(
-      new VisitaActions.AddVisit({
+      new Visit.AddProduct({
         nombre: "quemado no tanto",
         cedula: "quemado no tanto",
         direccion: "quemado no tanto",
@@ -73,5 +74,4 @@ export class UbicacionPage implements OnInit {
       })
     );
   }
-
 }

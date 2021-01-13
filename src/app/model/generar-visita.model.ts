@@ -1,4 +1,4 @@
-export interface generalInterface{
+export interface generalModel{
   nombre: string,
   cedula: string,
   direccion: string,
@@ -6,12 +6,12 @@ export interface generalInterface{
   email: string,
   cedula_catastral: string,
   matricula_inmobiliaria: string,
-  descripcion: string,
-  objeto: string,
+  descripcion?: string,
+  objeto?: string,
   escritura?: string
 }
 
-export interface ubicacionInterface{
+export interface ubicacionModel{
   barrio: string;
   municipio: string;
   departamento: string;
@@ -24,7 +24,7 @@ export interface ubicacionInterface{
   equipamientos: string
 }
 
-export interface fisicoInterface {
+export interface fisicoModel {
   norte: string,
   sur: string,
   oriente: string,
@@ -37,7 +37,7 @@ export interface fisicoInterface {
   unidad_cultivos: string
 }
 
-export interface predioInterface {
+export interface predioModel {
   licencia: string,
   no_licencia?: string,
   ph: string,

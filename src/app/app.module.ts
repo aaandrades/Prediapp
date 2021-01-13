@@ -1,18 +1,18 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatExpansionModule} from '@angular/material/expansion'; 
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-import { ComponentsModule } from './components/components.module';
-import { StoreModule } from '@ngrx/store';
-import { visitReducer } from './store/visita.reducer';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { RouteReuseStrategy } from "@angular/router";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { IonicModule, IonicRouteStrategy } from "@ionic/angular";
+import { SplashScreen } from "@ionic-native/splash-screen/ngx";
+import { StatusBar } from "@ionic-native/status-bar/ngx";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatExpansionModule } from "@angular/material/expansion";
+import { AppComponent } from "./app.component";
+import { AppRoutingModule } from "./app-routing.module";
+import { ComponentsModule } from "./components/components.module";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { StoreModule } from "@ngrx/store";
+import { VisitReducer } from './store/reducer';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,16 +25,14 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     ComponentsModule,
     MatExpansionModule,
     MatDatepickerModule,
-    StoreModule.forRoot({ general: visitReducer }),
-    StoreDevtoolsModule.instrument({
-      maxAge: 25, // Retains last 25 states
-    }),
+    StoreModule.forRoot({visits: VisitReducer}),
+    StoreDevtoolsModule.instrument(),
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

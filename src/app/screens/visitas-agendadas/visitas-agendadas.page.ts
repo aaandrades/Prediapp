@@ -1,13 +1,12 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { AppState } from "../../store/app.state";
 import {
-  generalInterface,
-  ubicacionInterface,
-  fisicoInterface,
-  predioInterface,
-} from "../../screens/generar-visita/model/generar-visita.model";
+  generalModel,
+  ubicacionModel,
+  fisicoModel,
+  predioModel,
+} from "../../model/generar-visita.model";
 
 @Component({
   selector: "app-visitas-agendadas",
@@ -16,15 +15,16 @@ import {
 })
 export class VisitasAgendadasPage implements OnInit {
 
-  generals: Observable<generalInterface[]>;
+  visit: Observable<Array<any>>
 
-  constructor(private store: Store) {
-    this.generals = this.store.select('general').subscribe((visita) => {
-      console.log('Visitas: ', visita)
-    });
+  constructor(private store: Store<any>) {
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.visit = this.store.select('visit');
+    console.log("VISITA: ",this.visit);
+  }
 
   
 }
+ 

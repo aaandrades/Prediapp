@@ -3,6 +3,7 @@ import { Component, OnInit } from "@angular/core";
 import { Platform } from "@ionic/angular";
 import { SplashScreen } from "@ionic-native/splash-screen/ngx";
 import { StatusBar } from "@ionic-native/status-bar/ngx";
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: "app-root",
@@ -11,10 +12,13 @@ import { StatusBar } from "@ionic-native/status-bar/ngx";
 })
 export class AppComponent implements OnInit {
 
+  visit: Array<any>;
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private store: Store<any>
   ) {
     this.initializeApp();
   }
@@ -27,5 +31,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.store.select('visit').subscribe((state => this.visit = state));
   }
 }
