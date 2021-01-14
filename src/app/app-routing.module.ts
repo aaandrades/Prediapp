@@ -23,11 +23,7 @@ const routes: Routes = [
   {
     path: 'inicio',
     loadChildren: () => import('./screens/inicio/inicio.module').then( m => m.InicioPageModule)
-  },
-  {
-    path: 'mapa',
-    loadChildren: () => import('./screens/mapa/mapa.module').then( m => m.MapaPageModule)
-  },
+  }
 ];
 
 @NgModule({

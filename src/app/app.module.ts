@@ -25,7 +25,7 @@ import { VisitReducer } from './store/reducer';
     ComponentsModule,
     MatExpansionModule,
     MatDatepickerModule,
-    StoreModule.forRoot({visits: VisitReducer}),
+    StoreModule.forRoot({visits: VisitReducer, }),
     StoreDevtoolsModule.instrument(),
   ],
   providers: [
