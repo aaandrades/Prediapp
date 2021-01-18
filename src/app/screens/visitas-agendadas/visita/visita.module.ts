@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 import { VisitaPageRoutingModule } from './visita-routing.module';
 
 import { VisitaPage } from './visita.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { VisitaPage } from './visita.page';
     FormsModule,
     IonicModule,
     VisitaPageRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ComponentsModule
   ],
   declarations: [VisitaPage]
 })
