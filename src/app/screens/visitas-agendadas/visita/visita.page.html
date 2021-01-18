@@ -2,15 +2,70 @@
 
 <ion-content>
     <div class="card">
-        General
+        <h2>General</h2>
+        <div class="card__content">
+            <p>Fecha: {{this.visita_actual.general.fecha}}</p>
+            <p>Nombre encargado: {{this.visita_actual.general.nombre}}</p>
+            <p>Cedula: {{this.visita_actual.general.cedula}}</p>
+            <p>Dirección Residencia: {{this.visita_actual.general.direccion}}</p>
+            <p>Celular: {{this.visita_actual.general.celular}}</p>
+            <p>Email: {{this.visita_actual.general.email}}</p>
+            <p>Cedula Catastral: {{this.visita_actual.general.cedula_catastral}}</p>
+            <p>Matrícula Inmobiliaria: {{this.visita_actual.general.matricula_inmobiliaria}}</p>
+            <p>Descripción General: {{this.visita_actual.general.descripcion_general}}</p>
+            <p>Objeto del Predio: {{this.visita_actual.general.objeto}}</p>
+            <p>Escritura de cambio de Dominio: {{this.visita_actual.general.escritura_disponible}}</p>
+            <p class="card__content__link">Ver Registro Fotográfico</p>
+        </div>
     </div>
     <div class="card">
-        Ubicación
+        <h2>Ubicación</h2>
+        <div class="card__content">
+            <p>Departamento: {{this.visita_actual.ubicacion.departamento}}</p>
+            <p>Municipio: {{this.visita_actual.ubicacion.municipio}}</p>
+            <p>Barrio/Vereda: {{this.visita_actual.ubicacion.barrrio}}</p>
+            <p>Clasificación uso del suelo: {{this.visita_actual.ubicacion.clasificacion}}</p>
+            <p>Actividad que desarrolla el predio: {{this.visita_actual.ubicacion.actividad}}</p>
+            <p>Topografía del predio: {{this.visita_actual.ubicacion.topografia}}</p>
+            <p>Latitud: {{this.visita_actual.ubicacion.latitud}}</p>
+            <p>Longitud: {{this.visita_actual.ubicacion.longitud}}</p>
+            <p>Vías: {{this.visita_actual.ubicacion.vias}}</p>
+            <p>Estrato: {{this.visita_actual.ubicacion.estrato}}</p>
+            <p>Alumbrado Público: {{this.visita_actual.ubicacion.alumbrado}}</p>
+            <p>Transporte Público: {{this.visita_actual.ubicacion.transporte}}</p>
+            <p>Equipamientos Públicos: {{this.visita_actual.ubicacion.equipamiento}}</p>
+            <p class="card__content__link">Ver Registro Fotográfico</p>
+        </div>
     </div>
     <div class="card">
-        Físico
+        <h2>Físico</h2>
+        <div class="card__content">
+            <p>Lindero Norte: {{this.visita_actual.fisico.norte}}</p>
+            <p>Lindero Sur: {{this.visita_actual.fisico.sur}}</p>
+            <p>Lindero Occidente: {{this.visita_actual.fisico.occidente}}</p>
+            <p>Lindero Oriente: {{this.visita_actual.fisico.oriente}}</p>
+            <p>Area de Terreno sobre linderos: {{this.visita_actual.fisico.area_terreno}}</p>
+            <hr color="gray">
+            <p>Construcción 1</p>
+            <p>Descripción: {{this.visita_actual.fisico.construccion.construccion_1.descripcion}}</p>
+            <p>Área: {{this.visita_actual.fisico.construccion.construccion_1.area}}</p>
+            <p>Unidad: {{this.visita_actual.fisico.construccion.construccion_1.unidad}}</p>
+            <p class="card__content__link">Ver Registro Fotográfico</p>
+        </div>
     </div>
     <div class="card">
-        Predio
+        <h2>Predio</h2>
+        <div class="card__content">
+            <p>Licencia de construcción disponible: {{this.visita_actual.predio.licencia}}</p>
+            <p>Propiedad Horizontal: {{this.visita_actual.predio.ph}}</p>
+            <p>Electricidad: {{this.visita_actual.predio.electricidad}}</p>
+            <p>Agua Potable: {{this.visita_actual.predio.agua}}</p>
+            <p>Gas Natural: {{this.visita_actual.predio.gas}}</p>
+            <p>Alcantarillado: {{this.visita_actual.predio.alcantarillado}}</p>
+            <p>Teléfono: {{this.visita_actual.predio.telefono}}</p>
+            <p>Internet: {{this.visita_actual.predio.internet}}</p>
+            <p>Riesgo: {{this.visita_actual.predio.riesgo}}</p>
+            <p class="card__content__link">Ver Registro Fotográfico</p>
+        </div>
     </div>
 </ion-content>

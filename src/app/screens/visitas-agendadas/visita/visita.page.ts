@@ -8,8 +8,7 @@ import {
 } from "@angular/forms";
 import { Observable } from "rxjs";
 import { Store } from "@ngrx/store";
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-
+import { Router, ActivatedRoute, ParamMap } from "@angular/router";
 
 @Component({
   selector: "app-visita",
@@ -19,22 +18,22 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class VisitaPage implements OnInit {
   matricula: string;
   visit: Observable<Array<any>>;
+  visita_actual: object = [];
 
-  constructor(private route: ActivatedRoute,
-  private store: Store<any>) { }
+  constructor(private route: ActivatedRoute, private store: Store<any>) {}
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
+    this.route.params.subscribe((params) => {
       this.matricula = params.matricula;
-    })
-    console.log("MATRICULA: ", this.matricula);
+    });
     this.visit = this.store.select("visits");
     this.visit.pipe().subscribe((data: any) => {
-      console.log(data.filter(datas => datas.matricula_inmobiliaria == this.matricula));
-          //  console.log("VISITA: ", data);
+      this.visita_actual = data.filter(
+        (datas) => datas.general.matricula_inmobiliaria == this.matricula
+      )[0];
     });
+    console.log("FORMAT:",this.visita_actual);
   }
 
-  onSubmit() {
-  }
+  onSubmit() {}
 }

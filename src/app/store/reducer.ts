@@ -3,22 +3,83 @@ import { VisitActionTypes, VisitActions } from "./actions";
 
 export let initialState = [
   {
-    nombre: "Carlos Pinto Salazar",
-    cedula: "19902734",
-    direccion: "Carrera 15 No 24 31 sur",
-    celular: "3175262626",
-    email: "cpintos@gmail.com",
-    cedula_catastral: "N/A",
-    matricula_inmobiliaria: "050S-568923",
+    general: {
+      nombre: "Carlos Pinto Salazar",
+      cedula: "19902734",
+      direccion: "Carrera 29 No 52B 24 sur",
+      celular: "3175262626",
+      email: "cpintos@gmail.com",
+      cedula_catastral: "N/A",
+      matricula_inmobiliaria: "050S-568923",
+      fecha: "05/12/2020",
+      descripcion_general:
+        "Predio ubicado en el barrio El Carmen, posee dos entradas y porton, consta de 3 pisos y terraza",
+      objeto: "Predio requerido para crédito hipotecario.",
+      escritura_disponible:
+        "EP 1254 de la notaria tercera de Bogotá - 15-23-2006 constitute a compraventa.",
+    },
+    ubicacion: {
+      barrrio: "El Carmen",
+      municipio: "Bogotá D.C.",
+      departamento: "Bogotá D.C.",
+      clasificacion: "Residencial",
+      actividad: "Residencial",
+      topografia: "Plana",
+      latitud: "4.6544",
+      longitud: "-74.154",
+      vias: "Bueno",
+      estrato: "2",
+      alumbrado: "Sí",
+      transporte: "Sí",
+      equipamiento: "Sí",
+    },
+    fisico: {
+      norte:
+        "Linda por el norte con la carrera 29 con una extensión de 12 metros.",
+      sur:
+        "Linda por el sur con la propiedad de Emilio Pastura con una extensión de 12 metros.",
+      oriente:
+        "Linda por el oriente con la propiedad de Margarita Chavez con una extensión de 20 metros.",
+      occidente:
+        "Linda por el occidente con una propiedad sin información en un total de 20 metros.",
+      area_terreno: "240 metros cuadrados",
+      construccion: {
+        construccion_1: {
+          descripcion:
+            "Construcción por extensión de 3 pisos regulares construidos",
+          area: "190",
+          unidad: "Metros cuadrados",
+        },
+      },
+    },
+    predio: {
+      licencia: "No",
+      ph: "No",
+      electricidad: "Sí",
+      agua: "Sí",
+      gas: "Sí",
+      alcantarillado: "Sí",
+      telefono: "Sí",
+      internet: "Sí",
+      riesgo: "No",
+    },
   },
   {
-    nombre: "Lidia Sánchez Basto",
-    cedula: "51760491",
-    direccion: "Carrera 29 No 52B 24 sur",
-    celular: "23143011536",
-    email: "lidia.maria.sanchez@gmail.com",
-    cedula_catastral: "N/A",
-    matricula_inmobiliaria: "050S-785926",
+    general: {
+      nombre: "Lidia Sánchez Basto",
+      cedula: "51760491",
+      direccion: "Carrera 25 No 52G 59 sur",
+      celular: "3143011536",
+      email: "lidia.maria.sanchez@gmail.com",
+      cedula_catastral: "N/A",
+      matricula_inmobiliaria: "050S-785926",
+      fecha: "05/06/2021",
+      descripcion_general:
+        "Predio ubicado en el barrio El Carmen, posee dos entradas y porton, consta de 3 pisos y terraza",
+      objeto: "Predio requerido para crédito hipotecario.",
+      escritura_disponible:
+        "EP 1254 de la notaria tercera de Bogotá - 15-23-2006 constitute a compraventa.",
+    },
   },
 ];
 

@@ -52,10 +52,10 @@
                 </ion-list>
             </div>
             <div *ngIf="!this.loading">
-                <div *ngFor="let item of aspecto_general" class="body__card__form" [routerLink]="['visita', item.matricula_inmobiliaria]">
-                    <p class="body__card__form__title">{{item.direccion}}</p>
-                    <span>Matrícula Inmobiliaria: {{item.matricula_inmobiliaria}}</span><br>
-                    <span>Encargado: {{item.nombre}}</span>
+                <div *ngFor="let item of aspecto_general" class="body__card__form" [routerLink]="['visita', item.general.matricula_inmobiliaria]">
+                    <p class="body__card__form__title">{{item.general.direccion}}</p>
+                    <span>Matrícula Inmobiliaria: {{item.general.matricula_inmobiliaria}}</span><br>
+                    <span>Encargado: {{item.general.nombre}}</span>
                     <hr color="grey">
                 </div>
             </div>

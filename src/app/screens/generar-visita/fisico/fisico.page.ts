@@ -25,7 +25,8 @@ export class FisicoPage implements OnInit {
       norte: new FormControl("",[Validators.required]),
       sur: new FormControl("",[Validators.required]),
       oriente: new FormControl("",[Validators.required]),
-      occidente: new FormControl("",[Validators.required])
+      occidente: new FormControl("", [Validators.required]),
+      area_terreno: new FormControl("")
     });
 
     this.fisico_construcciones = new FormGroup({
