@@ -118,7 +118,7 @@
         </div>
         <div class="container">
             <button class="button__disabled" *ngIf="this.predio_descripcion.invalid">Enviar</button>
-            <button class="button" *ngIf="!this.predio_descripcion.invalid" (click)="onSubmit()">Enviar</button>
+            <button class="button" *ngIf="!this.predio_descripcion.invalid" (click)="presentAlertConfirm()">Enviar</button>
         </div>
     </mat-accordion>
 </div>

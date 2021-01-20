@@ -12,9 +12,9 @@ export interface generalModel{
 }
 
 export interface ubicacionModel{
-  barrio: string;
-  municipio: string;
-  departamento: string;
+  barrio: string,
+  municipio: string,
+  departamento: string,
   clasificacion_suelo: string,
   actividad: string,
   topografia: string,
