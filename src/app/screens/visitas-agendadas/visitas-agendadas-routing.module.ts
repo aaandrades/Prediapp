@@ -13,6 +13,11 @@ const routes: Routes = [
     path: 'visita/:matricula',
     loadChildren: () => import('./visita/visita.module').then( m => m.VisitaPageModule)
   },
+  {
+    path: 'crear-visita',
+    loadChildren: () => import('./nueva-visita/nueva-visita.module').then( m => m.NuevaVisitaPageModule)
+  },
+
 ];
 
 @NgModule({

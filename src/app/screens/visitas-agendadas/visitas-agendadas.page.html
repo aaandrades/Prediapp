@@ -23,13 +23,17 @@
                 </ion-list>
             </div>
             <div *ngIf="!this.loading">
-                <div class="body__card__form" [routerLink]="['/inicio/generar-visita']">
-                    <p class="body__card__form__title">Calle 52G No 35 - 25 sur</p>
-                    <span>Matrícula Inmobiliaria: 050N-654654</span><br>
-                    <span>Encargado: José Felipe Mondragon</span>
+                <div *ngFor="let item of new_visit" class="body__card__form" [routerLink]="['/inicio/generar-visita']">
+                    <p class="body__card__form__title">{{item.direccion}}</p>
+                    <span>Matrícula Inmobiliaria: {{item.matricula}}</span><br>
+                    <span>Encargado: {{item.encargado}}</span>
                     <hr color="grey">
                 </div>
             </div>
+        </div>
+        <div class="body__add" (click)=createNewVisit()>
+            <ion-icon class="body__add__icon" name="add-circle-sharp"></ion-icon>
+            <p class="body__add__text">Agregar nueva visita</p>
         </div>
         <div class="body__card">
             <p class="body__card__title">Visitas realizadas</p>

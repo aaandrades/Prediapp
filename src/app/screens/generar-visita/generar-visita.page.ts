@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-generar-visita',
@@ -11,11 +12,6 @@ export class GenerarVisitaPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
-  }
-
-  onChange(tabName: string) {
-    this.seccion = tabName;
   }
 
 }

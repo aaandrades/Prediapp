@@ -32,6 +32,7 @@ export class FisicoPage implements OnInit {
     this.activeRoute.queryParams.subscribe((params) => {
       this.general_visit = this.router.getCurrentNavigation().extras.state.general;
       this.ubicacion_visit = this.router.getCurrentNavigation().extras.state.ubicacion;
+      console.log("THIS: ", this.ubicacion_visit);
     });
   }
 
@@ -79,6 +80,7 @@ export class FisicoPage implements OnInit {
       sur: this.fisico_linderos.get("sur").value,
       oriente: this.fisico_linderos.get("oriente").value,
       occidente: this.fisico_linderos.get("occidente").value,
+      area_terreno: this.fisico_linderos.get("area_terreno").value,
       construccion: {
         construccion_1: {
           descripcion_construccion: this.fisico_construcciones.get("descripcion_construccion").value,

@@ -17,8 +17,11 @@ export interface ubicacionModel{
   departamento: string,
   clasificacion_suelo: string,
   actividad: string,
+  lat: number,
+  long: number,
   topografia: string,
   estado_vias: string,
+  estrato: string,
   alumbrado: string,
   transporte: string,
   equipamientos: string

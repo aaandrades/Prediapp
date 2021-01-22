@@ -1,0 +1,38 @@
+<app-toolbar titulo="Crear nueva visita"></app-toolbar>
+
+<ion-content>
+    <div class="body">
+        <div class="body__card">
+            <p class="body__card__title">Datos básicos de visita</p>
+            <form id="objeto" class="accordion__panel__description" novalidate [formGroup]="visita">
+                <label class="labelinput">
+                    <span>Nombre encargado: </span>
+                    <input class="inputTypes" type="text" formControlName="nombre">
+                </label>
+                <label class="labelinput">
+                    <span>Identificación: </span>
+                    <input class="inputTypes" type="text" formControlName="cedula">
+                </label>
+                <label class="labelinput">
+                    <span>Número de Contacto: </span>
+                    <input class="inputTypes" type="text" formControlName="celular">
+                </label>
+                <br>
+                <label class="labelinput">
+                    <span>Dirección predio: </span>
+                    <input class="inputTypes" type="text" formControlName="direccion">
+                </label>
+                <label class="labelinput">
+                    <span>Matrícula Inmobiliaria</span>
+                    <input class="inputTypes" type="text" formControlName="matricula">
+                </label>
+                <label class="labelinput">
+                    <span>Observación del Predio</span>
+                    <input class="inputTypes" type="text" formControlName="observacion">
+                </label>
+                <br>
+            </form>
+        </div>
+        <button class="button" (click)="return()">Enviar</button>
+    </div>
+</ion-content>

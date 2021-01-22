@@ -72,8 +72,8 @@
                         <label class="labelinput">
                             <span>Estado Vías</span>
                             <ion-item>
-                                <ion-select>
-                                    <ion-select-option value="Excelente">Excelente</ion-select-option>
+                                <ion-select formControlName="estado_vias">
+                                    <ion-select-option  value="Excelente">Excelente</ion-select-option>
                                     <ion-select-option value="Bueno">Bueno</ion-select-option>
                                     <ion-select-option value="Regular">Regular</ion-select-option>
                                     <ion-select-option value="Malo">Malo</ion-select-option>
@@ -84,8 +84,8 @@
                         <label class="labelinput">
                             <span>Estrato</span>
                             <ion-item>
-                                <ion-select>
-                                    <ion-select-option value="6">6</ion-select-option>
+                                <ion-select formControlName="estrato">
+                                    <ion-select-option  value="6">6</ion-select-option>
                                     <ion-select-option value="5">5</ion-select-option>
                                     <ion-select-option value="4">4</ion-select-option>
                                     <ion-select-option value="3">3</ion-select-option>
@@ -98,22 +98,22 @@
                         <label class="labelRadio">
                             <div class="accordion__panel__description__button">
                                 <p>Alumbrado Público</p>
-                                <p>SÍ </p><input type="radio" formControlName="alumbrado" value="true">
-                                <p>NO </p><input type="radio" formControlName="alumbrado" value="false">
+                                <p>SÍ </p><input type="radio" formControlName="alumbrado" value="Sí">
+                                <p>NO </p><input type="radio" formControlName="alumbrado" value="No">
                             </div>
                         </label>
                         <label class="labelRadio">
                             <div class="accordion__panel__description__button">
                                 <p>Transporte Público</p>
-                                <p>SÍ </p><input type="radio" formControlName="transporte" value="true">
-                                <p>NO </p><input type="radio" formControlName="transporte" value="false">
+                                <p>SÍ </p><input type="radio" formControlName="transporte" value="Sí">
+                                <p>NO </p><input type="radio" formControlName="transporte" value="No">
                             </div>
                         </label>
                         <label class="labelRadio">
                             <div class="accordion__panel__description__button">
                                 <p>Equipamientos Públicos</p>
-                                <p>SÍ </p><input type="radio" formControlName="equipamientos" value="true">
-                                <p>NO </p><input type="radio" formControlName="equipamientos" value="false">
+                                <p>SÍ </p><input type="radio" formControlName="equipamientos" value="Sí">
+                                <p>NO </p><input type="radio" formControlName="equipamientos" value="No">
                             </div>
                         </label>
                     </form>

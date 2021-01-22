@@ -1,5 +1,5 @@
 import { visitAll } from "@angular/compiler";
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ChangeDetectorRef } from "@angular/core";
 import {
   Validators,
   FormControl,
@@ -33,6 +33,7 @@ export class UbicacionPage implements OnInit {
     private router: Router,
     private activeRoute: ActivatedRoute,
     private geolocation: Geolocation,
+    private detectChanges: ChangeDetectorRef
   ) {
     this.activeRoute.queryParams.subscribe((params) => {
       this.general_visit = this.router.getCurrentNavigation().extras.state.general;
@@ -56,6 +57,7 @@ export class UbicacionPage implements OnInit {
     });
     this.ubicacion_sector = new FormGroup({
       estado_vias: new FormControl(""),
+      estrato: new FormControl(""),
       alumbrado: new FormControl(""),
       transporte: new FormControl(""),
       equipamientos: new FormControl(""),
@@ -94,6 +96,9 @@ export class UbicacionPage implements OnInit {
       actividad: this.ubicacion_uso.get("actividad").value,
       topografia: this.ubicacion_uso.get("topografia").value,
       estado_vias: this.ubicacion_sector.get("estado_vias").value,
+      estrato: this.ubicacion_sector.get("estrato").value,
+      lat: this.lat,
+      long: this.long,
       alumbrado: this.ubicacion_sector.get("alumbrado").value,
       transporte: this.ubicacion_sector.get("transporte").value,
       equipamientos: this.ubicacion_sector.get("equipamientos").value,

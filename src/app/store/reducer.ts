@@ -12,26 +12,26 @@ export let initialState = [
       cedula_catastral: "N/A",
       matricula_inmobiliaria: "050S-568923",
       fecha: "05/12/2020",
-      descripcion_general:
+      descripcion:
         "Predio ubicado en el barrio El Carmen, posee dos entradas y porton, consta de 3 pisos y terraza",
       objeto: "Predio requerido para crédito hipotecario.",
       escritura_disponible:
         "EP 1254 de la notaria tercera de Bogotá - 15-23-2006 constitute a compraventa.",
     },
     ubicacion: {
-      barrrio: "El Carmen",
+      barrio: "El Carmen",
       municipio: "Bogotá D.C.",
       departamento: "Bogotá D.C.",
-      clasificacion: "Residencial",
+      clasificacion_suelo: "Residencial",
       actividad: "Residencial",
       topografia: "Plana",
       latitud: "4.6544",
       longitud: "-74.154",
-      vias: "Bueno",
+      estado_vias: "Bueno",
       estrato: "2",
       alumbrado: "Sí",
       transporte: "Sí",
-      equipamiento: "Sí",
+      equipamientos: "Sí",
     },
     fisico: {
       norte:
@@ -45,10 +45,10 @@ export let initialState = [
       area_terreno: "240 metros cuadrados",
       construccion: {
         construccion_1: {
-          descripcion:
+          descripcion_construccion:
             "Construcción por extensión de 3 pisos regulares construidos",
-          area: "190",
-          unidad: "Metros cuadrados",
+          area_construccion: "190",
+          unidad_construccion: "Metros cuadrados",
         },
       },
     },
@@ -57,7 +57,7 @@ export let initialState = [
       ph: "No",
       electricidad: "Sí",
       agua: "Sí",
-      gas: "Sí",
+      gas_natural: "Sí",
       alcantarillado: "Sí",
       telefono: "Sí",
       internet: "Sí",
