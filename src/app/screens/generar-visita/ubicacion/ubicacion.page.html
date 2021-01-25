@@ -129,16 +129,25 @@
                     <div class="registro">
                         <div class="registro__option">
                             <span>Vías</span>
-                            <ion-icon name="camera" class="registro__option__icon"></ion-icon>
+                            <ion-icon (click)="addPhotoToGallery()" name="camera" class="registro__option__icon"></ion-icon>
                         </div>
                         <div class="registro__option">
                             <span>Contadores Públicos</span>
-                            <ion-icon name="camera" class="registro__option__icon"></ion-icon>
+                            <ion-icon (click)="addPhotoToGallery()" name="camera" class="registro__option__icon"></ion-icon>
                         </div>
                     </div>
                 </mat-expansion-panel>
             </div>
         </mat-accordion>
+    </div>
+    <div class="viewPhotos">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
+                    <ion-img [src]="photo.webviewPath"></ion-img>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
     </div>
 </ion-content>
 <ion-fab vertical="bottom" horizontal="end" slot="fixed">

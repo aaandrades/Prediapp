@@ -6,6 +6,7 @@ import {
   ReactiveFormsModule,
 } from "@angular/forms";
 import { ActivatedRoute, NavigationExtras, Router } from "@angular/router";
+import { PhotoService } from "src/app/services/photo.service";
 import {
   fisicoModel,
   generalModel,
@@ -28,7 +29,7 @@ export class FisicoPage implements OnInit {
   general_visit: generalModel;
   ubicacion_visit: ubicacionModel;
 
-  constructor(private router: Router, private activeRoute: ActivatedRoute) {
+  constructor(private router: Router, private activeRoute: ActivatedRoute, private photoService: PhotoService) {
     this.activeRoute.queryParams.subscribe((params) => {
       this.general_visit = this.router.getCurrentNavigation().extras.state.general;
       this.ubicacion_visit = this.router.getCurrentNavigation().extras.state.ubicacion;
@@ -60,6 +61,10 @@ export class FisicoPage implements OnInit {
       area_cultivos: new FormControl(""),
       unidad_cultivos: new FormControl(""),
     });
+  }
+
+  addPhotoToGallery() {
+    this.photoService.addNewToGallery();
   }
 
   onSubmit() {

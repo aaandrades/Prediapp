@@ -32,6 +32,15 @@
                     </form>
                 </mat-expansion-panel>
             </div>
+            <div class="viewPhotos">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
+                            <ion-img [src]="photo.webviewPath"></ion-img>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
             <div>
                 <mat-expansion-panel hideToggle class="accordion__panel" *ngFor="let item of construcciones">
                     <mat-expansion-panel-header class="accordion__panel__title">
@@ -57,7 +66,7 @@
                     </form>
                     <div class="registro">
                         <p class="registro__option__text">Fotografía Panorámica</p>
-                        <ion-icon name="camera" class="registro__option__icon"></ion-icon>
+                        <ion-icon (click)="addPhotoToGallery()" name="camera" class="registro__option__icon"></ion-icon>
                     </div>
                 </mat-expansion-panel>
             </div>
@@ -90,7 +99,7 @@
                     </form>
                     <div class="registro">
                         <p class="registro__option__text">Fotografía Panorámica</p>
-                        <ion-icon name="camera" class="registro__option__icon"></ion-icon>
+                        <ion-icon (click)="addPhotoToGallery()" name="camera" class="registro__option__icon"></ion-icon>
                     </div>
                 </mat-expansion-panel>
             </div>

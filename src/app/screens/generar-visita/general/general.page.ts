@@ -7,6 +7,7 @@ import {
 } from "@angular/forms";
 import { ActivatedRoute, NavigationExtras, Router } from "@angular/router";
 import { generalModel } from "../../../model/generar-visita.model";
+import { PhotoService } from '../../../services/photo.service';
 
 @Component({
   selector: "app-general",
@@ -27,7 +28,7 @@ export class GeneralPage implements OnInit {
     this.newItemEvent.emit("VALOR DESDE GENERAL");
   }
 
-  constructor(private router: Router, private activeRoute: ActivatedRoute) {}
+  constructor(private router: Router,public photoService: PhotoService, private activeRoute: ActivatedRoute) {}
 
   ngOnInit() {
     this.initialFormGroup();
@@ -52,6 +53,10 @@ export class GeneralPage implements OnInit {
       objeto: new FormControl(""),
       escritura: new FormControl(""),
     });
+  }
+
+  addPhotoToGallery() {
+    this.photoService.addNewToGallery();
   }
 
   onSubmit() {

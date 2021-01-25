@@ -8,6 +8,7 @@ import {
 } from "@angular/forms";
 import { ActivatedRoute, Router, NavigationExtras } from "@angular/router";
 import { Geolocation } from "@ionic-native/geolocation/ngx";
+import { PhotoService } from "src/app/services/photo.service";
 
 import {
   generalModel,
@@ -33,7 +34,7 @@ export class UbicacionPage implements OnInit {
     private router: Router,
     private activeRoute: ActivatedRoute,
     private geolocation: Geolocation,
-    private detectChanges: ChangeDetectorRef
+    private photoService: PhotoService
   ) {
     this.activeRoute.queryParams.subscribe((params) => {
       this.general_visit = this.router.getCurrentNavigation().extras.state.general;
@@ -62,6 +63,10 @@ export class UbicacionPage implements OnInit {
       transporte: new FormControl(""),
       equipamientos: new FormControl(""),
     });
+  }
+
+  addPhotoToGallery() {
+    this.photoService.addNewToGallery();
   }
 
   onSubmit() {

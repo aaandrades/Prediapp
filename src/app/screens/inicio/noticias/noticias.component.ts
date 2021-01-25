@@ -49,9 +49,10 @@ export class NoticiasComponent implements OnInit {
   constructor(private theInAppBrowser: InAppBrowser) { }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.loading = false;
-    }, 3000);
+    this.loading = false;
+    // setTimeout(() => {
+    //   this.loading = false;
+    // }, 3000);
   }
 
   openBrowser(url: string) {
