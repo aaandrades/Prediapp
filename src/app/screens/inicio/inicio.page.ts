@@ -41,7 +41,6 @@ export class InicioPage implements OnInit {
   }
 
   muestro() {
-    console.log("OPRIMI")
   }
 
 }

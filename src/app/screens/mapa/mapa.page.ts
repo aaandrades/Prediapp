@@ -54,6 +54,5 @@ export class MapaPage implements OnInit {
   }
 
   functions() {
-    console.log("OPRIMO BOTON");
   }
 }

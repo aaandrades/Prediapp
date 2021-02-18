@@ -32,7 +32,6 @@ export class VisitaPage implements OnInit {
         (datas) => datas.general.matricula_inmobiliaria == this.matricula
       )[0];
     });
-    console.log("FORMAT:",this.visita_actual);
   }
 
   onSubmit() {}

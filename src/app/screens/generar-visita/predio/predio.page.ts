@@ -43,7 +43,6 @@ export class PredioPage implements OnInit {
       this.general_visit = this.router.getCurrentNavigation().extras.state.general;
       this.ubicacion_visit = this.router.getCurrentNavigation().extras.state.ubicacion;
       this.fisico_visit = this.router.getCurrentNavigation().extras.state.fisico;
-      console.log("FISICO: ", this.fisico_visit);
     });
   }
 
@@ -113,7 +112,6 @@ export class PredioPage implements OnInit {
     });
     await loading.present();
     const { role, data } = await loading.onDidDismiss();
-    console.log('Loading dismissed!');
   }
 
   private orchestrateVisit() {

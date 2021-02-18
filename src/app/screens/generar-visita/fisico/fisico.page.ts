@@ -33,7 +33,6 @@ export class FisicoPage implements OnInit {
     this.activeRoute.queryParams.subscribe((params) => {
       this.general_visit = this.router.getCurrentNavigation().extras.state.general;
       this.ubicacion_visit = this.router.getCurrentNavigation().extras.state.ubicacion;
-      console.log("THIS: ", this.ubicacion_visit);
     });
   }
 

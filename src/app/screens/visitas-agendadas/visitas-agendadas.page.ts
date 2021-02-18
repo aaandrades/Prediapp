@@ -33,16 +33,13 @@ export class VisitasAgendadasPage implements OnInit {
     this.visit = this.store.select("visits");
     this.visit.pipe().subscribe((data: any) => {
       this.aspecto_general = data;
-      console.log("VISITA: ", data);
     });
     setTimeout(() => { this.loading = false; }, 2000);
     try {
       this.activeRoute.queryParams.subscribe((params) => {
-        console.log("EXTRAS: ", this.router.getCurrentNavigation().extras.state.nueva)
         this.new_visit = this.router.getCurrentNavigation().extras.state.nueva;
       });
     } catch {
-      console.log("ERROR")
       this.new_visit = [{
         direccion: 'Calle 52G No 35 - 25 sur',
         matricula: '050N-654654',

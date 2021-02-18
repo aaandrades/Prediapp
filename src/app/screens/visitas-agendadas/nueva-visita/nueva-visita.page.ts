@@ -25,7 +25,6 @@ export class NuevaVisitaPage implements OnInit {
 
   ngOnInit() {
     this.route.queryParams.subscribe((params) => {
-      console.log(this.router.getCurrentNavigation().extras.state.visitas_actuales) ;
     });
     this.visita = new FormGroup({
       nombre: new FormControl("", [Validators.required]),

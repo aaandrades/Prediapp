@@ -88,7 +88,7 @@ export class UbicacionPage implements OnInit {
         this.long = resp.coords.longitude;
       })
       .catch((error) => {
-        console.log("Error obteniendo la ubicación", error);
+        console.error("Error obteniendo la ubicación", error);
       });
   }
 
