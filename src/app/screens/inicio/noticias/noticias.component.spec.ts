@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NoticiasComponent } from './noticias.component';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 describe('NoticiasComponent', () => {
   let component: NoticiasComponent;
@@ -8,7 +9,8 @@ describe('NoticiasComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NoticiasComponent ]
+      declarations: [NoticiasComponent],
+      providers:[InAppBrowser]
     })
     .compileComponents();
   }));
