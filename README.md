@@ -1,6 +1,6 @@
 ## :rocket: Prediapp
 
-![aaandrades](https://img.shields.io/badge/-aaandrades-orange)
+![aaandrades](https://img.shields.io/badge/-Frontend-orange)
 ![Build](https://img.shields.io/badge/-Working-brightgreen)
 
 ### :memo: Description
